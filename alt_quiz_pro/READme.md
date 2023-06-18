@@ -13,6 +13,15 @@
 
 ## Topics:
 + History
-+ The Ocean
 + Science
-+  
++ Math
++ Economics
+
+-------------------------------------------------
+
+### Bonus Things
+
++ Replay button
++ Winner page 
++ Typing your own name or 3 letter intial
++ Sound effects for correct and wrong answers

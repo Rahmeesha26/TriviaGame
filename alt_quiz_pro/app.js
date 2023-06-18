@@ -1,7 +1,7 @@
 const start = {
           player1: 0,
           player2: 0,
-          question: {},
+          question: { },
           who: true
 }
 
@@ -22,13 +22,14 @@ const $player2score = $(".p2 h4")
 //---------------------------------------------------------------//
 
 const chooseAnswers = (event, question) => {
+          console.log(event)
           if (event.target.innerText === question.answer) {
                     console.log("correct")
                     if (start.who) {
-                              start.player1++
+                              start.player1 ++
                               start.who = !start.who
                     } else {
-                              start.player2++
+                              start.player2 ++
                               start.who = !start.who
                     }
                     setBoard(questions)
@@ -37,7 +38,6 @@ const chooseAnswers = (event, question) => {
                     setBoard(questions)
                     start.who = !start.who
           }
-          setBoard(questions)
 }
 
 //---------------------------------------------------------------//
@@ -67,7 +67,7 @@ const URL = "https://cdn.contentful.com/spaces/y0jf0k6w82oa/environments/master/
 $.ajax(URL)
 .then((data) => {
           questions = data.items.map((question) => question.fields)
-          console.log()
+          console.log(data)
 
           setBoard(questions)
 })
